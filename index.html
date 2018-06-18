@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<title>ECS 163 Final Project - KickStarter</title>
+		<link rel="stylesheet" href="style.css" href="bootstrap.min.css">
+		<script src="scripts/d3.v4.min.js"></script>
+	
+
+	</head>
+	<style src="style.css"></style>
+
+	<body>
+		<header>
+			<h2 style=>How to win at</h2>
+			<center><img src="Logo.png" alt="Kickstarter Logo" align="middle"></center>
+			<h4>Carson Dacus, Travis Kendall, Donald Nguyen, Michael Wong </h4> 
+			<h5>Data Source: <a href="https://www.kaggle.com/kemical/kickstarter-projects">https://www.kaggle.com/kemical/kickstarter-projects</a></h5><br>
+		</header>
+		
+			<h4>Select a Year and a Category to review the results.</h4>
+		<div>			
+  			<label class="checkBox">2015
+  				<input type="checkbox" id="check2015" value="2015" onclick="checkBoxFunction()" checked>
+  				<span class="checkmark"></span>
+  			</label>
+  			<label class="checkBox">2016
+  				<input type="checkbox" id="check2016" value="2016" onclick="checkBoxFunction()" checked>
+  				<span class="checkmark"></span>
+  			</label>
+  			<label class="checkBox">2017
+  				<input type="checkbox" id="check2017" value="2017" onclick="checkBoxFunction()" checked>
+  				<span class="checkmark"></span>
+  			</label>
+  		</div>
+  		
+		<div class="container">
+			<div class="chart1">	
+				<h4 class="chartTitle">Total USD Pledged</h4>
+				<div class="radarChart" style="display: inline-flex;"></div>
+			</div>
+
+			<div class="scatter"></div>
+
+			<div class="parallelcoordinates"></div>
+		 
+		 </div>
+
+ 		<script  src="scripts/RadarChart.js" ></script> 		
+		<script  src="scripts/makeRadar.js" ></script>
+		<!-- <script src="scripts/HeatMap.js"></script> -->
+		<script src="scripts/ScatterChart.js"></script>
+		<script src="scripts/render-queue.js"></script>
+        <script src="scripts/ParallelPlots.js"></script>
+        <script src="scripts/Main.js"></script>
+        
+    </body>
+</html>
+

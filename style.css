@@ -1,0 +1,366 @@
+
+/*Kickstarter color pallet webpage http://www.color-hex.com/color-palette/14053*/
+/*white #eeeeee
+  teal #2bd9de
+  green #2bde73
+  blue  #081245
+  dark green  #122906
+
+*/ 
+
+body {									/*overall body of the document*/
+	margin: auto;
+  	width: 80%;
+  	background-color: #eeeeee;			/*gunmetal background*/
+  	color: #122906;						/*platinum text*/
+  	text-align: center;	
+}
+h2, h3, h4, h5 {							/*headers*/		
+	text-align: center;
+}
+img{
+  text-align: center;
+  width: 50%;
+}
+.container{                   /*contains all the visualizations*/
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 30% 70% ;
+  display: grid;
+}
+
+.chart1{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.chartTitle{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.radarChart{
+  margin-top: 0px;
+  padding-top: 0px;
+
+}
+.scatter {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.parallelcoordinates {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  text-align: left;
+  margin-left: 10%;
+
+}
+
+div{
+  width: 100%;
+  height: 100%;
+  /*outline: 1px solid black;*/
+}
+
+.checkBox{
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+}
+
+/* On mouse-over, add a grey background color */
+.checkBox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkBox input:checked ~ .checkmark {
+  background-color: #29cf6c;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkBox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkBox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 8px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* The container */
+.radioBut {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radioBut input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.rcheckmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radioBut:hover input ~ .rcheckmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radioBut input:checked ~ .rcheckmark {
+    background-color: #2bd9de;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.rcheckmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radioBut input:checked ~ .rcheckmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioBut .rcheckmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+body {
+  min-width: 760px;
+}
+
+
+.brush .extent {
+  fill-opacity: .3;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+pre {
+  width: 100%;
+  height: 300px;
+  margin: 6px 12px;
+  tab-size: 40;
+  font-size: 10px;
+  overflow: auto;
+}
+
+ #weightdiv {
+  width : 100%;
+  height  : 650px;
+}
+
+#radardiv {
+  width : 400px;
+  height  : 400px;
+}
+
+#map {
+  height: 400px;
+  width: 650px;
+  z-index: 1;
+}
+
+#fig {
+  width: 880px;
+  height: 460px;
+}
+
+#vis1{
+  width: 1000px;
+  height: 400px;
+  position: relative;
+}
+
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+.link:hover {
+  stroke-opacity: .5;
+}
+
+.stockdiv {
+  width:  525px;
+  height: 310px;
+}
+
+
+#SearchPanel {
+  /*width: 305px;*/
+  height: 400px;
+}
+
+
+.parcoords {
+  display: block;
+}
+
+.parcoords svg,
+.parcoords canvas {
+  font: 10px sans-serif;
+  position: absolute;
+}
+
+.parcoords canvas {
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.axis .title {
+  font-size: 10px;
+  transform: rotate(-21deg) translate(-5px,-6px);
+  fill: #222;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+
+.axis .tick text {
+  fill: #222;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.axis.Sector .tick text {
+  opacity: 1;
+}
+
+.axis:hover line,
+.axis:hover path,
+.axis.active line,
+.axis.active path {
+  fill: none;
+  stroke: #222;
+  stroke-width: 1px;
+}
+
+.axis:hover .title {
+  font-weight: bold;
+}
+
+.axis:hover .tick text {
+  opacity: 1;
+}
+
+.axis.active .title {
+  font-weight: bold;
+}
+
+.axis.active .tick text {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.brush .extent {
+  fill-opacity: .3;
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+
+.c {
+  color: #01050a;
+}
+
+.circleborder {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius:50%;
+}
+
+.brushed {
+  fill: #ff3399;
+  stroke: #8e1b54;
+  opacity: 1.0;
+}
+
+.non_brushed {
+  fill: #404040;
+  opacity: 0.5;
+}
